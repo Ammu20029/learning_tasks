@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Embedding Webpage</title>
+    </head>
+    <body>
+        <title>Meta title tag</title>
+        <meta name="description" content="This is meta description tag"/>
+        <meta name="keywords" content="title,description,keyword,robot"
+        <iframe src="dal.jpeg" width="60%" height="300px" style="border:2px #025"></iframe>
+        <form>
+            <label for="color">Select Color : </label>
+            <input type="color" />
+            <label for="date">Select Date-Time Local : </label>
+            <input type="datetime-local" />
+            <label for="number">Select Number in Range : </label>
+            <input type="range" min="1" max="10" step="1" />
+        </form>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+        
+            // Draw a red rectangle
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(20, 15, 150, 50);
+          </script>
+
+        <br><label for=”file”>Downloading progress:</label>
+        <progress id=”file” value=”32” max=”100”>32%</progress><br>
+        <label for="disk_c">Disk usage C:</label>
+        <meter id= "disk_c"value="2"min="0"max="10">2 out of 10</meter><br>
+        <label for ="disk_d">Disk usage D:</label>
+        <meter id="disk_d"value="0.6">60%</meter>
+        <img src="cofee.jpeg"alt="Drink">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button aria-disabled="true">Submit</button>
+    </body>
+</html>

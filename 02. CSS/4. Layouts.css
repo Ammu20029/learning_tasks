@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <style>
+    html {
+      font-size: 16px; /* base for rem units */
+    }
+
+    /* Default font */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* Poppins for the heading */
+    h1.align {
+      text-align: center;
+      color: darkblue;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    p.color {
+      color: teal;
+    }
+
+    /* Georgia for spacing paragraph */
+    p.spacing {
+      font-family: Georgia, serif;
+      letter-spacing: 3px;
+      word-spacing: 15px;
+      line-height: 1.6;
+    }
+
+    /* Poppins for shadow heading */
+    h2.shadow {
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+      color: darkred;
+    }
+
+    a.decor {
+      text-decoration: none;
+      color: purple;
+      font-weight: bold;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    /* Link states */
+    a.decor:visited {
+      color: darkmagenta;
+    }
+
+    a.decor:hover {
+      color: darkorange;
+      text-decoration: underline;
+    }
+
+    a.decor:active {
+      color: red;
+      text-decoration: underline;
+    }
+
+    a.decor:focus {
+      outline: 2px dashed orange;
+      outline-offset: 3px;
+    }
+
+    .del {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    /* === Font Size Units Demonstration === */
+
+    .font-px {
+      font-size: 18px;
+      color: darkgreen;
+    }
+
+    .font-em {
+      font-size: 1.5em; /* relative to parent (default = 16px) → 24px */
+      color: brown;
+    }
+
+    .font-rem {
+      font-size: 2rem; /* relative to root (html = 16px) → 32px */
+      color: navy;
+    }
+
+    .font-percent {
+      font-size: 125%; /* 125% of parent → 20px */
+      color: maroon;
+    }
+
+    /* Icon styles */
+    .icon {
+      color: teal;
+      margin-left: 5px;
+    }
+
+    /* --- List Styling --- */
+
+    /* Default list */
+    ul.default-list {
+      list-style-type: disc; /* default bullet */
+      margin-left: 20px;
+      color: #333;
+      font-family: Georgia, serif;
+    }
+
+    /* Custom circle bullets */
+    ul.circle-list {
+      list-style-type: circle;
+      margin-left: 20px;
+      color: darkcyan;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Custom square bullets */
+    ol.square-list {
+      list-style-type: square;
+      margin-left: 20px;
+      color: darkmagenta;
+      font-family: Arial, sans-serif;
+      font-size: 1.1rem;
+    }
+
+    /* Custom markers with ::marker */
+    ul.custom-marker-list {
+      list-style: none; /* remove default */
+      margin-left: 20px;
+      padding-left: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    ul.custom-marker-list li::marker {
+      content: "🔥 "; /* fire emoji as bullet */
+      color: orangered;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Using FontAwesome icon as custom marker with ::before */
+    ul.fa-icon-list {
+      list-style: none;
+      margin-left: 20px;
+      padding-left: 0;
+      font-family: Arial, sans-serif;
+    }
+    ul.fa-icon-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 8px;
+    }
+    ul.fa-icon-list li::before {
+      content: "\f007"; /* Unicode for FontAwesome user icon */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="align">
+    Centered Heading (Poppins)
+    <i class="fas fa-star icon"></i>
+  </h1>
+
+  <p class="color">
+    This paragraph text is teal colored.
+    <i class="fas fa-check-circle icon"></i>
+  </p>
+
+  <p class="spacing">
+    Letter spacing increases space between characters, <br>
+    while word spacing affects space between words.<br>
+    Line height controls the vertical spacing between lines.
+    <i class="fas fa-align-left icon"></i>
+  </p>
+
+  <h2 class="shadow">
+    Text with Shadow (Poppins)
+    <i class="fas fa-magic icon"></i>
+  </h2>
+
+  <a href="#" class="decor" tabindex="0">
+    Styled Link
+    <i class="fas fa-link icon"></i>
+  </a>
+  
+  <p class="del">
+    This text is struck-through.
+    <i class="fas fa-times icon"></i>
+  </p>
+
+  <!-- Lists Section -->
+  <hr>
+  <h2>List Styling Examples:</h2>
+
+  <h3>Default Bullets (disc):</h3>
+  <ul class="default-list">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+  </ul>
+
+  <h3>Circle Bullets:</h3>
+  <ul class="circle-list">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+  </ul>
+
+  <h3>Square Bullets (on ordered list):</h3>
+  <ol class="square-list">
+    <li>Step One</li>
+    <li>Step Two</li>
+    <li>Step Three</li>
+  </ol>
+
+  <h3>Custom Emoji Markers (::marker):</h3>
+  <ul class="custom-marker-list">
+    <li>Fire up your project</li>
+    <li>Stay focused</li>
+    <li>Keep coding</li>
+  </ul>
+
+  <h3>FontAwesome Icon Markers (::before):</h3>
+  <ul class="fa-icon-list">
+    <li>User profile</li>
+    <li>Settings</li>
+    <li>Logout</li>
+  </ul>
+
+</body>
+</html>

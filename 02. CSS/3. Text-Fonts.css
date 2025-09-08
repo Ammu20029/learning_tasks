@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Basic box styles */
+        div {
+            border: 1px solid black;
+            margin: 25px 50px 75px 100px;
+            padding: 25px 25px 60px 50px;
+            background-color: lightblue;
+        }
+
+        /* Scrollable box with limited height */
+        .scroll-box {
+            height: 50px;
+            overflow: scroll;
+        }
+
+        /* Paragraph styles */
+        p.dotted {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+
+        p.dashed {
+            outline-style: dashed;
+            padding: 10px;
+        }
+
+        /* Rounded corner box */
+        #rcorners4 {
+            border-radius: 15px;
+            background: #73AD21;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+            color: white;
+        }
+
+        /* Responsive box with media queries */
+        .div1 {
+            width: 100%;
+            min-width: 50px;
+            max-width: 400px;
+            padding: 10px;
+            text-align: center;
+            background-color: powderblue;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 400px) {
+            .div1 {
+                background-color: lightcoral;
+                color: white;
+            }
+        }
+
+        @media (min-width: 401px) {
+            .div1 {
+                background-color: lightgreen;
+                color: darkblue;
+            }
+        }
+
+        /* Table row hiding */
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        tr.collapse {
+            display: none; /* Better than visibility: collapse */
+        }
+
+        /* Opacity */
+        div.second {
+            opacity: 0.3;
+        }
+
+        /* Display types */
+        .box {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid black;
+        }
+
+        .block {
+            display: block;
+            background-color: lightblue;
+        }
+
+        .inline {
+            display: inline;
+            background-color: lightgreen;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color: lightcoral;
+            width: 150px;
+            height: 50px;
+        }
+
+        .none {
+            display: none;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="dotted">A dotted paragraph background.</p>
+    <p class="dashed">Dashed outline paragraph.</p>
+
+    <p>One value - border-radius: 15px:</p>
+    <p id="rcorners4">Rounded corner box</p>
+
+    <div class="scroll-box">
+        This div has scroll if content exceeds the height. Try adding more content here to test scrolling.
+    </div>
+
+    <div class="div1">
+        Resize the browser window below or above 400px to change the background color.
+    </div>
+
+    <table>
+        <tr>
+            <td>Pru</td>
+            <td>Tru</td>
+        </tr>
+        <tr class="collapse">
+            <td>Lol</td>
+            <td>Grif</td>
+        </tr>
+    </table>
+
+    <div class="second"><p>This div has opacity: 0.3</p></div>
+
+    <h3>Display: block</h3>
+    <div class="box block">Block 1</div>
+    <div class="box block">Block 2</div>
+
+    <h3>Display: inline</h3>
+    <span class="box inline">Inline 1</span>
+    <span class="box inline">Inline 2</span>
+
+    <h3>Display: inline-block</h3>
+    <span class="box inline-block">Inline-Block 1</span>
+    <span class="box inline-block">Inline-Block 2</span>
+
+    <h3>Display: none</h3>
+    <div class="box none">This is hidden with display: none</div>
+
+</body>
+</html>

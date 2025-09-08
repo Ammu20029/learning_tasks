@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Positioning Example</title>
+  <link rel="stylesheet" href="day4.css">
+</head>
+<body>
+
+  <div class="static">
+    <img src="day3image.jpeg" alt="day3image" width="300" height="300">
+    <strong>Static Position</strong> — This is the default position. It follows normal document flow.
+  </div>
+
+  <div class="relative">
+    <strong>Relative Position</strong> — This box is moved 30px to the right from its normal position.
+  </div>
+
+  <div class="sticky">
+    <strong>Sticky Position</strong> — This will stick to the top of the page when you scroll.
+  </div>
+
+  <div class="relative-container">
+    <strong>Relative Container</strong> — This is the parent with `position: relative`.
+
+    <div class="absolute">
+      <strong>Absolute Position</strong><br>
+      Positioned absolutely inside the relative container.
+    </div>
+  </div>
+
+  <div class="content">
+    <p>Scroll down the page to see how the sticky and fixed elements behave.</p>
+    <p>This is some tall content to enable scrolling...</p>
+  </div>
+
+  <div class="fixed">
+    <strong>Fixed Position</strong> — This box stays in the bottom-right corner even when scrolling.
+  </div>
+
+  <ul class="nav">
+    <li><a href="day5.html">Home</a></li>
+    <li><a href="day6.html">About us</a></li>
+  </ul>
+
+  <h1>Flex Container</h1>
+  <div class="flex-container">
+    <div style="order: 2;">1</div>
+    <div style="order: 1;">2</div>
+  </div>
+
+  <h2>Flex Shrink</h2>
+  <div class="flex-container">
+    <div class="shrink-0">no shrink</div>
+    <div class="shrink-3">shrink</div>
+  </div>
+
+  <h2>Flex Box with Flex-Basis</h2>
+  <div id="mymain">
+    <div style="background-color:coral;">red div</div>
+    <div id="bluediv" style="background-color:lightblue;">blue div</div>
+    <div style="background-color:khaki;">yellow div</div>
+    <div style="background-color:pink;">pink div</div>
+  </div>
+
+</body>
+</html>
