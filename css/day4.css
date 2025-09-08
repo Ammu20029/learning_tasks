@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-bottom: 100px;
+    background-color: #E7E9EB;
+  }
+  
+  /* Static (default) */
+  .static {
+    position: static;
+    z-index: 1;
+    border: 30px solid #73AD21;
+    background-color: #e8f5e9;
+    padding: 200px;
+    margin: 200px;
+  }
+  .static img {
+    float: right;
+    margin-left: 15px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Relative */
+  .relative {
+    position: relative;
+    z-index: 2;
+    left: 30px;
+    border: 3px solid #2196F3;
+    background-color: #e3f2fd;
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  /* Fixed */
+  .fixed {
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
+    right: 10px;
+    width: 250px;
+    background-color: #fff3e0;
+    border: 3px solid #FF9800;
+    padding: 10px;
+  }
+  
+  /* Sticky */
+  .sticky {
+    position: sticky;
+    top: 0;
+    background-color: #e0f7fa;
+    border: 2px solid #00BCD4;
+    padding: 10px;
+    margin: 20px 0;
+    z-index: 50;
+  }
+  
+  /* Absolute */
+  .relative-container {
+    position: relative;
+    z-index: 4;
+    width: 90%;
+    height: 150px;
+    margin: 20px;
+    border: 3px solid #4CAF50;
+    background-color: #f1f8e9;
+    padding: 10px;
+  }
+  .absolute {
+    position: absolute;
+    z-index: 5;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    height: 70px;
+    background-color: #ffebee;
+    border: 3px solid #f44336;
+    padding: 10px;
+    clear: right;
+  }
+  
+  .content {
+    height: 1000px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #f5f5f5, #ccc);
+  }
+  
+  /* Navigation */
+  .nav {
+    background-color: lightgray;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav li {
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px;
+  }
+  
+  /* Flex Container */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #73AD21;
+    align-items: flex-start;
+    width: 400px;
+    border: 3px solid black;
+    overflow: hidden;
+  }
+  .flex-container > .shrink-0 {
+    flex-shrink: 0;
+    background-color: #f44336;
+  }
+  .flex-container > .shrink-3 {
+    flex-shrink: 3;
+    background-color: #ab9e9d;
+  }
+  .flex-container > div {
+    background-color: #2196F3;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    flex-grow: 4;
+  }
+  
+  /* Flex Shrink Demo */
+  #mymain {
+    height: 100px;
+    display: flex;
+  }
+  #mymain div {
+    padding: 5px;
+  }
+  #bluediv {
+    flex-basis: 200px;
+  }
+  
