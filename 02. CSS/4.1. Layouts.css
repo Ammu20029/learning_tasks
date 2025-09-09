@@ -1,0 +1,134 @@
+/* Static positioning (default) */
+.static {
+  position: static;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Relative positioning */
+.relative {
+  position: relative;
+  left: 30px;
+  background-color: #d1e7dd;
+  padding: 10px;
+  margin: 20px;
+}
+
+/* Sticky positioning */
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: #f9c74f;
+  padding: 10px;
+  margin: 20px;
+  z-index: 1;
+}
+
+/* Relative container for absolute positioning */
+.relative-container {
+  position: relative;
+  background-color: #e9ecef;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Absolute positioning inside relative container */
+.absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #adb5bd;
+  padding: 10px;
+  width: 200px;
+}
+
+/* Fixed positioning */
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Content for scroll testing */
+.content {
+  height: 1000px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Navigation links */
+.nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Flex container basics */
+.flex-container {
+  display: flex;
+  border: 1px solid #000;
+  margin: 20px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.flex-container > div {
+  background-color: #dee2e6;
+  padding: 20px;
+  font-size: 1.2em;
+  flex-grow: 1;
+}
+
+/* Flex shrink examples */
+.shrink-0 {
+  flex-shrink: 0;
+  width: 200px;
+  background-color: #ffadad;
+}
+
+.shrink-3 {
+  flex-shrink: 3;
+  width: 200px;
+  background-color: #caffbf;
+}
+
+/* Flex-basis example */
+#mymain {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+#mymain > div {
+  flex: 1 1 100px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+#bluediv {
+  flex-basis: 300px;
+}
