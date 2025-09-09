@@ -1,0 +1,122 @@
+/* Reset & Base Variables */
+:root {
+    --font-base: 16px;
+    --font-lg: 20px;
+    --radius: 8px;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --bg-light: #f9f9f9;
+    --card-bg: #ffffff;
+    --primary-color: #2196F3;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background: var(--bg-light);
+    font-size: var(--font-base);
+    padding: 20px;
+    line-height: 1.6;
+    color: #222;
+  }
+  
+  /*  Layout: Responsive Grid Container*/
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  /* Grid Items */
+  .card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  /* Focus Accessibility */
+  .card:focus {
+    outline: 3px dashed var(--primary-color);
+    outline-offset: 4px;
+  }
+  
+  /* Hover Effect (for interactivity) */
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  /*  Responsive Breakpoints (Mobile-First)*/
+  /* Small tablets and up */
+  @media (min-width: 640px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+      font-size: 1.05rem;
+    }
+  }
+  /* Tablets and up */
+  @media (min-width: 768px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .card {
+      font-size: 1.1rem;
+    }
+  }
+  /* Laptops and up */
+  @media (min-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .card {
+      font-size: 1.2rem;
+    }
+  }
+  /* Large desktops */
+  @media (min-width: 1280px) {
+    body {
+      padding: 40px;
+    }
+    .card {
+      font-size: var(--font-lg);
+    }
+  } 
+  /* Specific Grid Area Demo (Span/Line Control)*/
+   .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 100px 300px;
+    gap: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+  }
+  /* Grid Child Items */
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    border-radius: var(--radius);
+  }
+  /* Spanning */
+  .a {
+    grid-column: span 2;
+  }
+  .b {
+    grid-row: span 2;
+  }
+  .c {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  
