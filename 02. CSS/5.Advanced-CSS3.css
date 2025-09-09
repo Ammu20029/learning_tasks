@@ -1,0 +1,102 @@
+/* ------------------------------
+   CSS Variables (Optional)
+-------------------------------- */
+:root {
+    --primary-color: #3498db;
+    --hover-color: #2ecc71;
+    --text-color: #fff;
+    --border-radius: 6px;
+    --padding: 12px 24px;
+    --font-size: 16px;
+    --shadow-color: grey;
+    --transition-speed: 0.4s;
+  }
+  
+  /* ------------------------------
+     Keyframe Animation
+  -------------------------------- */
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(0deg) translate(0, 0) skew(0deg, 0deg);
+    }
+    50% {
+      transform: scale(1.05) rotate(3deg) translate(3px, 3px) skew(2deg, 1deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg) translate(0, 0) skew(0deg, 0deg);
+    }
+  }
+  
+  /* ------------------------------
+     Button Container
+  -------------------------------- */
+  .first-div {
+    width: fit-content;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 1px 1px 5px 3px var(--shadow-color);
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* ------------------------------
+     Animated Button
+  -------------------------------- */
+  .hover-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  
+    transition: background-color var(--transition-speed) ease,
+                color var(--transition-speed) ease,
+                transform 0.3s ease;
+  
+    animation: pulse 2s infinite;
+  }
+  
+  .hover-button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.1) rotate(5deg) translate(5px, 5px) skew(3deg, 2deg);
+  }
+  
+  /* ------------------------------
+     Gradient Boxes
+  -------------------------------- */
+  .gradient-box {
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  
+  /* Linear Gradient */
+  #grad {
+    background-image: linear-gradient(to right, red, blue);
+  }
+  
+  /* Radial Gradient */
+  #grad1 {
+    background-image: radial-gradient(red, green, blue);
+  }
+  
+  /* Radial Gradient with stops */
+  #grad2 {
+    background-image: radial-gradient(red 5%, green 15%, blue 60%);
+  }
+  
+  /* Repeating Linear Gradient */
+  #grad3 {
+    background-image: repeating-linear-gradient(45deg, red, blue 7%, green 10%);
+  }
+  
