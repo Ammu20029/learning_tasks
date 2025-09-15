@@ -27,6 +27,9 @@ h6 {
 .navbar-nav .nav-link.active {
   color:#23272b
 }
+.carouselSlidesEx{
+  transition:transform 0.01 ease;
+}
 
 /* Button  */
 .btn-dark {
