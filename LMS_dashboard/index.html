@@ -12,21 +12,21 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-info" style="height: 70px;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info" style="height: 70px;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="https://tse2.mm.bing.net/th/id/OIP._Co4GPXdaomOMOZpGp1cAgHaHa?pid=Api&P=0&h=180" alt="Logo" width="55" height="55">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav">
-        <a class="nav-link" href="/Dashboard">Dashboard</a>
-        <a class="nav-link" href="Course.html">Course</a>
-        <a class="nav-link" href="/Profile">Profile</a>
-        <a class="nav-link" href="/Settings">Settings</a>
-        <a class="nav-link" href="/Logout">Logout</a>
+        <a class="nav-link me-3" href="/Dashboard">Dashboard</a>
+        <a class="nav-link me-3" href="Course.html">Course</a>
+        <a class="nav-link me-3" href="/Profile">Profile</a>
+        <a class="nav-link me-3" href="/Settings">Settings</a>
+        <a class="nav-link me-3" href="/Logout">Logout</a>
       </div>
     </div>
   </div>
@@ -39,13 +39,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="s1.jpg" height="500px"/>
+      <img class="d-block w-100 carousel-image" src="s1.jpg">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="s2.jpg"  height="500px"/>
+      <img class="d-block w-100 carousel-image" src="s2.jpg">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="s3.jpg" height="500px"/>
+      <img class="d-block w-100 carousel-image" src="s3.jpg">
     </div>
 
   </div>
@@ -77,8 +77,8 @@
   </p>
 
   <!-- Buttons -->
-  <a href="Course.html" class="btn btn-dark btn-sm">Explore Courses</a>
-  <button class="btn btn-outline-primary btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
+  <a href="Course.html" class="btn btn-dark btn-sm my-button">Explore Courses</a>
+  <button class="btn btn-outline-primary btn-sm " data-bs-toggle="modal" data-bs-target="#courseDetailsModal">
     View Course Details
   </button>
 </div>
@@ -147,8 +147,8 @@
 <footer>
   <div class="container">
     <div>
-      <a href="/terms" class="text-decoration-none me-3">Terms of Service</a>
-      <a href="/privacy" class="text-decoration-none">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
     </div>
     <p>&copy; All rights reserved.</p>
   </div>
