@@ -3,6 +3,8 @@ body {
   font-family: 'Roboto', 'Open Sans', sans-serif;
   color: #333;
   line-height: 1.6;
+  height: 100%;
+  padding-bottom: 120px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -11,10 +13,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar {
-  display:flex;
-  height: 70px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  justify-content: space-between;
 }
 
 .navbar .nav-link {
@@ -29,15 +28,16 @@ h1, h2, h3, h4, h5 {
   color: #121212; /* Gold/Warning on hover */
   transform: scale(1.05);
 }
-#text{
-  padding:80px;
+.container, #text, section, .row {
+  padding-bottom: 100px; /* or margin-bottom */
 }
+
 .my-button {
-  margin-left:80px;
-}
+    padding:30px;
+  }
 
 
-.btn-custom {
+.btn {
   padding: 10px 20px;
   font-weight: 500;
   border-radius: 5px;
@@ -92,16 +92,22 @@ section h2 {
 .list-group{
   padding:0 50px;
 }
-
+.container-main {
+  padding-bottom: 80px;
+}
 footer {
+  width: 100%;
+  bottom: 0;
   background-color: #f1f3f5;
   padding: 1.5rem 0;
   font-size: 0.9rem;
   color: #6c757d;
-  text-align: center;
   border-top: 1px solid #dee2e6;
+  z-index: 1030;
 }
 
+
+    
 
 @media (max-width: 768px) {
   .hero h1 {
@@ -111,6 +117,16 @@ footer {
   section h2 {
     font-size: 1.5rem;
   }
+  #text {
+    margin: 0 20px;
+    padding: 300px !important;
+    background-color: #0d6efd;
+  }
+  body {
+    padding-bottom:150px;
+  }
+
+
 
   .card-text {
     font-size: 0.9rem;
