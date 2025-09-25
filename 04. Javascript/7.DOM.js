@@ -2,7 +2,7 @@ const element=document.getElementById("abc");
 element.style.color="green";
 element.style.textAlign="center";
 element.style.margin="30px";
-element.style.fontsize="20px";
+element.style.fontSize="20px";
 
 const elements=document.getElementsByClassName('selector');
 elements[0].style.color="green";
