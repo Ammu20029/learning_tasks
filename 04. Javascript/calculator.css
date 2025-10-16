@@ -16,17 +16,22 @@ body {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      border:solid black;
+      background-color: antiquewhite;
     }
     .buttons {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
+      background-color: antiquewhite;
     }
     button {
       padding: 15px;
       font-size: 18px;
       border: none;
       border-radius: 5px;
+      border:solid black;
+      background-color: antiquewhite;
       
     }
     button:hover {
@@ -37,6 +42,6 @@ body {
       color: white;
     }
     .clear {
-      background-color: #914843;
+      background-color: #9978e5;
       color: white;
     }
