@@ -12,7 +12,7 @@ class Book {
     Book.count++;
   }
 
-  // Get book info
+  // Getter retrieving the  book info
   get info() {
     return `${this.title} by ${this.author} (${this.year})`;
   }

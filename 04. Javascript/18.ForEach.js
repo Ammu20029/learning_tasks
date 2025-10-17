@@ -440,7 +440,7 @@ const guests = [
   },
 ];
 
-// Destructure first two guests to welcome them and get key info
+// Destructure first two guests to welcome them 
 const [
   {
     name: firstGuestName,// extract name
