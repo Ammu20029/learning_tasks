@@ -39,7 +39,7 @@ Promise.all([promise1,promise2,promise3]).then((values)=>{
 });
 //promise.allsettled-
 const p3=[promise1,promise2];
-Promise.allSettled(promises).then((results)=>
+Promise.allSettled(p3).then((results)=>
 results.forEach((result)=>
 console.log(result.status)),);
 //promise.any()-
@@ -51,13 +51,7 @@ setTimeout(resolve,100,"slow"));
 const promisess=[p1,p2,p4];
 Promise.any(promisess).then((value)=>
 console.log(value));
-//aggregate Error: no promise was resolved
-const failure=new Promise((resolve, reject)=>{
-    reject(new Error("always fails"));
-});
-Promise.any([failure]).catch((err)=>{
-    console.log(err);
-});
+
 //promise.race()- 
 const promise5=new Promise((resolve, reject)=>
 {
@@ -70,15 +64,38 @@ const promise6=new Promise((resolve,reject)=>
 Promise.race([promise5,promise6]).then((value)=>{
     console.log(value);
 });
-//promise.reject()- 
-function resolved(result){
-    console.log("Resolved");
-}
-function rejected(result){
-    console.error(result);
-}
-Promise.reject(new Error("fail")).then(resolved,rejected);
 
+
+//Array.reduce()
+[15, 16, 17, 18, 19].reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  10,
+);
+const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+
+const sum = objects.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  0,
+);
+
+const employees=[
+    {name:"Alice",department:"sales"},
+    {name:"john",department:"HR"},
+    {name:"Dave",department:"Customerservies"},
+    {name:"Charlie",department:"HR"},
+    {name:"Marie",department:"Customerservies"},
+    {name:"Eve",department:"sales"}
+];
+const Dept=employees.reduce((acc,employee)=>{
+    const dept=employee.department;
+    if(!acc[dept]){ // intializes array if not exists
+        acc[dept]=[];
+    }
+    acc[dept].push(employee.name);
+    return acc;
+},
+{});
+console.log(Dept);
 function loginUser(uname,password){
     return new Promise((resolve,reject)=>{
         console.log("logging in");
@@ -93,13 +110,33 @@ function loginUser(uname,password){
     });
 }
 
+let person={
+    firstName:"John",
+    lastName:"Doe",
+
+    get fullName() {
+        return this.firstName+""+this.lastName;
+    },
+
+    set fullName(name){
+        const parts=name.split(" ");
+        this.firstName=parts[0];
+        this.lastName=parts[1];
+    }
+};
+console.log(person.fullName);
+person.fullName="Alice Smith";
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.fullName);
+
 function UserTasks(userId){ //promise to get the user tasks
     return new Promise((resolve,reject)=>{
         console.log("Getting the tasks");
         setTimeout(()=>{
             if(userId===1){ // returns the following tasks if userid is 1
                 resolve([
-                    {title:"fix the bug"},,
+                    {title:"fix the bug"},
                     {title:"update the client"},
                 ]);
             }else{
@@ -114,9 +151,9 @@ loginUser("admin","4321")
     return UserTasks(user.userId);
 })
 .then(tasks=>{
-    consople.log("Your tasks:");
-    tasks.ForEach(tasks=>{
-        console.log(`.${tasks.title}`);
+    console.log("Your tasks:");
+    tasks.forEach(tasks=>{
+        console.log(`${tasks.title}`);
     });
 })
 .catch(error=>{
