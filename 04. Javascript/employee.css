@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-row label {
+  width: 150px; /* You can adjust this width */
+  font-weight: bold;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+button{
+    padding: 10px 20px;
+}
+.button-row{
+    display: flex;
+    justify-content: center;
+    text-align:center; 
+    margin-top: 15px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="employee.css">
+    <title>Employee Task Management</title>
+</head>
+<body>
+    <h1>Employee Task</h1>
+
+    <form id="myform">
+        <div class="form-row">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+
+        <div class="form-row">
+            <label for="employeeName">Employee Name:</label>
+            <input type="text" id="employeeName" name="employeeName" required>
+        </div>
+
+        <div class="form-row">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+        </div>
+
+        <div class="button-row">
+            <button type="submit">Add Task</button>
+        </div>
+    </form>
+
+    <h2>Tasks:</h2>
+    <input type="text" id="search" placeholder="Search tasks..." style="width: 100%; padding: 8px; margin-bottom: 15px;" />
+    
+    <div id="tasks"></div>
+
+
+    <script src="employee.js"></script>
+</body>
+</html>
