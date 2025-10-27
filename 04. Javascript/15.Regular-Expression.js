@@ -1,14 +1,14 @@
-let email = "prasannatalada748@gmail.com";
+let email = "Alice@example.com";
 let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 let emailResult = email.match(emailPattern);
 console.log(emailResult);
 
-let phone = "8688512423";
+let phone = "1234567890";
 let phonePattern = /^\d{10}$/;
 let phoneResult = phone.match(phonePattern);
 console.log(phoneResult);
 
-let password = "Prasanna@06";
+let password = "abcd";
 let passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^\w\s]).{8,}$/;
 let passwordResult = password.match(passwordPattern);
 console.log(passwordResult);
